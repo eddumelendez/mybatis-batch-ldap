@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.eddumelendez.batch.ldap.PeopleMapper">
+
+	<select id="findAll" resultType="net.eddumelendez.batch.ldap.People">
+		SELECT * from people
+	</select>
+
+	<insert id="insertPeople" parameterType="net.eddumelendez.batch.ldap.People">
+		insert into
+		people
+		(firstname,lastname) values (#{firstname},#{lastname});
+	</insert>
+
+</mapper>
